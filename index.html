@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- 
+    source: https://es.javascript.info/script-async-defer
+    Los scripts con defer nunca bloquean la página
+    siempre se ejecutan cuando el DOM esta listo (pero antes del evento DOMContentLoaded). 
+    DOMContentLoaded espera por el script diferido. Solo se dispara cuando el script es descargado y ejecutado.
+    Los scripts diferidos mantienen su orden relativo, tal cual los scripts regulares.
+    El atributo defer es ignorado si el <script> no tiene el atributo src.
+    -->
+    <script defer type="text/javascript" src="timer-script.js"></script>
+    <title>Timer</title>
+</head>
+<body>
+    <div class="child char-color-white" id="session-time">
+        <label for="session-minutes">Session time: </label>
+        <!-- <input type="range" min="1" max="120" step="1" value="25" name="session-range" id="session-time"> -->
+        <input type="number" value="25" type name="session-minutes" id="session-minutes">
+    </div>
+    <div class="child char-color-white" id="break-time">
+        <label for="break-minutes">break time: </label>
+        <input type="number" value="5" name="break-minutes" id="break-minutes">
+    </div>
+    <input type="checkbox" name="get alarm off" id="">
+    <div class="spacer"></div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cbuZfY2S2UQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="timer" id="timer">
+        <select name="session-selector" id="session-selector">
+            <option selected value="0">Main</option>
+            <option value="1">break</option>
+        </select>
+        
+        <div id="timer-time" class="timer-numbers">
+            <input type="number" name="timer-minutes" id="timer-minutes" value="25" readonly>
+            :
+            <input type="number" name="timer-seconds" id="timer-seconds" value="00" readonly>
+        </div>
+        <div>
+            <input id="btnStarstop" type="button" value="start" onclick="performAction()">
+            <input id="btnReset" type="button" value="Reset" onclick="resetTimers()">
+        </div>
+    </div>
+</body>
+</html>

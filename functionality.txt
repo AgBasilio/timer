@@ -1,0 +1,5 @@
+set two timers. with one click the firt star ticking, when it reach 0 a alarm sound go off.
+The user click on the timer to stop de sound and start the second timer in the same click.
+When the secod timer reach 0 another alarm sound start playing, the user click to stop the sound.
+Another click reset both timers.
+A new click restart the process.

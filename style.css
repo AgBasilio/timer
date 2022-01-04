@@ -1,0 +1,26 @@
+body, html {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    color: antiquewhite;
+}
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+.char-color-white {color: white;}
+.child {background-color: red;}
+.timer-numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    background-color:blue;
+
+}
+.spacer{
+    height: 30px;
+}
